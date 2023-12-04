@@ -1,21 +1,22 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\pagesController;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+
+
+Route::get('/home',[pagesController::class, 'index'])->name('home');
+Route::get('/about',[pagesController::class, 'about'])->name('about');
+Route::get('/footer',[pagesController::class, 'footer'])->name('footer');
+Route::get('/contact', [pagesController::class, 'contact'])->name('contact');
+Route::get('/checkout', [pagesController::class, 'checkout'])->name('checkout');
+Route::get('/AddCart', [pagesController::class, 'AddCart'])->name('AddCart');
+Route::get('/whislist',[pagesController::class, 'whislist'])->name('whislist');
+Route::get('/details',[pagesController::class, 'details'])->name('details');
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/dashboard', function () {
