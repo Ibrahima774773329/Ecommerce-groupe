@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="{{asset('style.css')}}"/>
     <title>checkout</title>
-
     <style>
         /* startttt detailscart */
   .entete{
@@ -223,7 +222,7 @@ input{
                         <a class="nav-link text-black" href="{{route('contact')}}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="{{ route('sign')}}">Sign Up</a>
+                        <a class="nav-link text-black" href="">Sign Up</a>
                     </li>
                 </ul>
                     <form class="d-flex">

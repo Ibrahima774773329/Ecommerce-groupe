@@ -12,7 +12,7 @@ Route::get('/footer',[pagesController::class, 'footer'])->name('footer');
 Route::get('/contact', [pagesController::class, 'contact'])->name('contact');
 Route::get('/checkout', [pagesController::class, 'checkout'])->name('checkout');
 Route::get('/AddCart', [pagesController::class, 'AddCart'])->name('AddCart');
-Route::get('/whislist',[pagesController::class, 'whislist'])->name('whislist');
+// Route::get('/whislist',[pagesController::class, 'whislist'])->name('whislist');
 Route::get('/details',[pagesController::class, 'details'])->name('details');
 
 Route::get('/', function () {
