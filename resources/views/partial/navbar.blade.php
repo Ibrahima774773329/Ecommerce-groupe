@@ -191,7 +191,7 @@ input{
                         <a class="nav-link text-black" href="{{route('contact')}}">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="#">Sign Up</a>
+                        <a class="nav-link text-black" href="{{route('register')}}">Sign Up</a>
                     </li>
                 </ul>
                     <form class="d-flex">
