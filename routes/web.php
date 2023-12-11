@@ -23,6 +23,7 @@ Route::delete('remove-from-cart', [ProductsController::class, 'remove'])->name('
 
 
 Route::get('/welcome',[pagesController::class, 'welcome'])->name('welcome');
+Route::get('navbar',[pagesController::class, 'navbar'])->name('navbar');
 Route::get('/home',[pagesController::class, 'index'])->name('home');
 Route::get('/about',[pagesController::class, 'about'])->name('about');
 Route::get('/footer',[pagesController::class, 'footer'])->name('footer');

@@ -139,6 +139,7 @@ visibility: hidden;
 }
  #navbarNav{
     margin-left: 25vh;
+
 }
 
 .navbar-brand{
@@ -149,8 +150,9 @@ visibility: hidden;
     height: 400px;
 }
 .form-control{
-    width: 50vh;
-    margin-bottom: 2vh;
+    width: 30vh;
+    margin-left: 20px;
+    margin-bottom: 1vh;
 }
 input{
     background-color: #f2f2f2;
@@ -160,6 +162,7 @@ input{
   right: 3vh;
   top: 2vh;
 }
+
   </style>
 
     <div class="entete ">
@@ -172,7 +175,7 @@ input{
     </div>
     <!-- headersss -->
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand text-black fw-bold fs-3" href="#">Exclusive</a>
             <!-- Bouton de basculement pour les petits écrans -->
@@ -195,7 +198,7 @@ input{
                         <a class="nav-link text-black" href="{{route('register')}}">Sign Up</a>
                     </li>
                 </ul>
-                    <form class="d-flex mx-5">
+                    <form class="d-flex">
                         <input class="form-control border-0" type="search" placeholder="what are you looking for?" aria-label="Search" style="  background-color: #f2f2f2;">
                         <i class="bi bi-search"></i>
                     </form>
