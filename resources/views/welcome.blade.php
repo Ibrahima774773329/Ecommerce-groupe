@@ -726,7 +726,7 @@ margin-right: 10px;
         </div>
       </div>
       <div class="cartCategorie">
-        
+
           <div class="category-phone3 col-sm-4">
             <a href="">
               <ion-icon class="icone" name="watch-outline"></ion-icon>
@@ -920,7 +920,7 @@ margin-right: 10px;
           <div class="col-md-3 col-12 col-sm-6 col-lg-3">
             <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
                 <img src="assets/eos-250d-03-500x500-1-5ar.png" alt="" class="card-img-top mx-5 h-70 w-50 mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
-                <button class="bg-dark text-white btn-cart py-2">Add To Cart</button>
+                <button class="bg-dark text-white btn-cart py-2 mt-5">Add To Cart</button>
                 <div class="icon-heart-eye">
                   <a href=""><i class="bi bi-suit-heart"></i> </a>
                   <a href=""><i class="bi bi-eye"></i></a>

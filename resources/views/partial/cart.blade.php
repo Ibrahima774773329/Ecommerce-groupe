@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <title>E-commerce</title>
+    <style>
+.btn-cart{
+
+}
+
+    </style>
 </head>
 <body>
 
@@ -55,7 +61,7 @@
           <div class="col-md-3 col-12 col-sm-6 col-lg-3">
             <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
                 <img src="assets/eos-250d-03-500x500-1-5ar.png" alt="" class="card-img-top h-80 w-80 mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
-                <button class="bg-dark text-white py-2 btn-cart">Add To Cart</button>
+                <button class="bg-dark text-white py-2  btn-cart">Add To Cart</button>
                 <div class="icon-heart-eye mb-5">
                   <a href=""><i class="bi bi-suit-heart"></i> </a>
                   <a href=""><i class="bi bi-eye"></i></a>

@@ -129,7 +129,7 @@ body {
     color: #000;
     margin: 10px;
     }
-    
+
     /*    categories */
     .head{
         display: flex;
@@ -360,7 +360,7 @@ body {
         transition: all 0.3s ease;
         transform: scale(1.05);
       }
-    .image-fill a{
+     age-fill a{
         color: #000;
     }
     .image-fill{
