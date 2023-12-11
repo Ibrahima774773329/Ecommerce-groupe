@@ -43,4 +43,9 @@ class pagesController extends Controller
     {
         return view('partial.footer');
     }
+
+    public function register()
+    {
+        return view('register');
+    }
 }

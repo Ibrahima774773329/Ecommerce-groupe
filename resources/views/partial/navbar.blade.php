@@ -191,8 +191,13 @@ input{
                     <li class="nav-item">
                         <a class="nav-link text-black" href="{{route('contact')}}">Contact</a>
                     </li>
+<<<<<<< HEAD
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{{route('register')}}">Sign Up</a>
+=======
                     <li class="nav-item  ">
                         <a class="nav-link text-black" href="#">Sign Up</a>
+>>>>>>> 036493c7907ee2b3e431bd1e9506e7765b167908
                     </li>
                 </ul>
                     <form class="d-flex">
