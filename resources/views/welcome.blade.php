@@ -726,18 +726,7 @@ margin-right: 10px;
         </div>
       </div>
       <div class="cartCategorie">
-          <div class="category-phone col-sm-4">
-            <a href="">
-              <ion-icon class="icone1" name="phone-portrait-outline"></ion-icon>
-            </a>
-            <p class="phones1 text-decoration-none">Phone</p>
-          </div>
-          <div class="category-phone col-sm-4">
-            <a href="">
-              <ion-icon class="icone1" name="desktop-outline"></ion-icon>
-            </a>
-            <p class="phones2 text-decoration-none">Computers</p>
-          </div>
+        
           <div class="category-phone3 col-sm-4">
             <a href="">
               <ion-icon class="icone" name="watch-outline"></ion-icon>

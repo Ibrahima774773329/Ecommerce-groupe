@@ -25,7 +25,10 @@ class pagesController extends Controller
     {
         return view('details');
     }
-
+    public function navbar()
+    {
+        return view('partial.navbar');
+    }
 
     public function whislist()
     {
