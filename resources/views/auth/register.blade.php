@@ -151,10 +151,10 @@
                         {{-- <input type="error" :messages="$errors->get('Confirm Password')" class="mt-2" /> --}}
                       </div>
                     <div>
-                        <button type="submit" class="btn btn-danger btn1 p-3 account">Create Account
+                       <a href="{{('login')}}"><button type="submit" class="btn btn-danger btn1 p-3 account">Create Account
 
                               {{ __('Register') }}
-                        </button>
+                        </button></a>
 
                       <!-- {{-- <img src="./assets/icon-google.png" alt="" width="6%"> <a href="{{route('google-auth')}}"> Sign up with Google</a> --}}
                       {{-- <a href="{{route('google-auth')}}">Continuer google</a> --}} -->

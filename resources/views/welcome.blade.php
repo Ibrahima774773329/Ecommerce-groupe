@@ -475,7 +475,7 @@ margin-right: 10px;
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                        <a class="nav-link text-black" href="{{route('home')}}">Home</a>
+                        <a class="nav-link text-black" href="{{route('welcome')}}">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-black" href="{{ route('about') }}">About</a>
