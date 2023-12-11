@@ -235,165 +235,9 @@ color: #fff;
         </div>
       </div>
       @endforeach
-      <!-- <div class="col-md-3 col-12 col-sm-6 col-lg-3">
-        <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
-          <img src="assets/gammaxx-l240-argb-1-500x500-1.png" class="card-img-top w-50 mx-5 py-4 col-md-3 col-12 col-sm-6 col-lg-3" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1 add2 "> <a href="{{route('cart')}}">Add To Cart</button>
-          <div class="icon-heart-eye2 ">
-            <a href=""><i class="bi bi-archive"></i> </a>
-            </div>
-        </div>
-        <div class="card-body">
-          <h6 class="card-title ">CANON EOS DSLR Camera</h6>
-          <div class="d-flex">
-            <p class="text-danger py-2">$360</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-12 col-sm-6 col-lg-3">
-        <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
-          <img src="assets/gp11prd3-1-UiN.png" class="card-img-top w-60 mx-5 py-5" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1 add2 "> <a href="{{route('cart')}}">Add To Cart</button>
-          <div class="icon-heart-eye py-5">
-            <a href=""><i class="bi bi-archive"></i> </a>
-            </div>
-        </div>
-        <div class="card-body">
-          <h6 class="card-title">ASUS FHD Gaming Laptop </h6>
-          <div class="d-flex">
-            <p class="text-danger py-2">$700</p>
 
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-12 col-sm-6 col-lg-3">
-        <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
-          <img src="assets/z8a1x34750011000000light-reversible-quilted-satin-jacket-1.png" class="card-img-top w-50 mx-5 py-3 " alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1 add3 "> <a href="{{route('cart')}}">Add To Cart</a></button>
-        <div class="icon-heart-eye2 py-5 ">
-            <a href=""><i class="bi bi-archive"></i> </a>
-        </div>
-        </div>
-        <div class="card-body">
-          <h6 class="card-title">Curology Product Set</h6>
-          <div class="d-flex">
-            <p class="text-danger py-2">$500</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-12 col-sm-6 col-lg-3">
-        <div class="card border-b" style=" background-color: #f2f2f2;height: 250px;">
-          <img src="assets/ideapad-gaming-3i-01-500x500-1.png" class="card-img-top py-3" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1 add2"> <a href="{{route('cart')}}">Add To Cart</button>
-          <div class="icon-heart-eye py-5">
-             <a href=""><i class="bi bi-eye"></i></a>
-             <h6 class="promo2">-35%</h6>
-          </div>
-        </div>
-        <div class="card-body">
-          <h6 class="card-title">Kids Electric Car</h6>
-          <div class="d-flex">
-            <p class="text-danger py-2">$960</p>
-            <div class="stars mx-2 py-3 d-flex justify-content-end">
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="fas fa-star"></i>
-              <i class="far fa-star"></i>
-              <i class="far fa-star"></i>
-            </div>
-            <p class="text-en-gras py-3">(65)</p>
-          </div>
-          <div class="image-color-change">
-            <img src="" alt="">
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-12 col-sm-6 col-lg-3">
-        <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
-          <img src="assets/g27cq4-500x500-1-3qt.png" class="card-img-top w-55" alt="Image 1">
-          <button class="bg-dark text-white mt-3 py-1 "> <a href="{{route('cart')}}">Add To Cart</button>
-          <div class="icon-heart-eye4 py-2 ">
-             <a href=""><i class="bi bi-eye"></i></a>
-          </div>
-        </div>
-        <div class="card-body">
-          <h6 class="card-title">Jr. Zoom Soccer Cleats</h6>
-          <div class="d-flex">
-            <p class="text-danger py-2">$1160</p>
-              <div class="stars mx-2 py-3 d-flex justify-content-end">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <p class="text-en-gras py-3">(35)</p>
-          </div>
-          <div class="image-color-change">
-
-          </div>
-        </div>
-      </div>
-      <div class="col-md-3 col-12 col-sm-6 col-lg-3">
-        <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
-          <img src="assets/g92-2-500x500-1.png" class="card-img-top  py-5" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1  add2"> <a href="{{route('cart')}}">Add To Cart</button>
-          <div class="icon-heart-eye py-5 ">
-             <a href=""><i class="bi bi-eye"></i></a>
-             <h5 class="promo3">New</h5>
-          </div>
-        </div>
-        <div class="card-body">
-          <h6 class="card-title">GP11 Shooter USB Gamepad</h6>
-          <div class="d-flex">
-            <p class="text-danger mx-2 py-2">$660</p>
-              <div class="stars d-flex py-3 justify-content-end">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <p class="text-en-gras py-3">(55)</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="col-md-3 col-12 col-sm-6 col-lg-3">
-        <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
-          <img src="assets/ak-900-01-500x500-1.png" class="card-img-top py-3" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1  add2"> <a href="{{route('cart')}}">Add To Cart</button>
-          <div class="icon-heart-eye py-5 ">
-             <a href=""><i class="bi bi-eye"></i></a>
-
-          </div>
-        </div>
-        <div class="card-body">
-          <h6 class="card-title">Quilted Satin Jacket</h6>
-          <div class="d-flex">
-            <p class="text-danger mx-2 py-2">$660</p>
-              <div class="stars  d-flex py-3 justify-content-end">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <p class="text-en-gras py-3">(55)</p>
-          </div>
-
-        </div>
-      </div>
-      <div class=" col-6 mx-auto ">
-        <button class="btn btn-lg btn-danger btn-button btnview" type="button">View All Products</button>
-      </div> -->
     </div>
   </div>
-
-  @include('partial.footer')
-
-
-
 
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -401,7 +245,7 @@ color: #fff;
    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+@include('partial.footer')
 </body>
 </body>
 </html>

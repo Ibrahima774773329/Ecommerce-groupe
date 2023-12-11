@@ -21,7 +21,7 @@
     </style>
 </head>
 <body>
-    @include('partial.navbar')
+@include('partial.navbar')
     <hr class="line ">
     <nav aria-label="breadcrumb" class="mx-5">
     <ol class="breadcrumb">
@@ -60,6 +60,7 @@
                     <div class="py-5">
                         <textarea name="" id="" cols="80" rows="8" placeholder="Your Message" style="  background-color: #f2f2f2;outline:none;" class="border-0 p-2"></textarea>
                     </div>
+                    <a href="" class="btn text-white float-end" style="background-color: #db4444;">Send Message</a>
                 </form>
             </div>
         </div>
