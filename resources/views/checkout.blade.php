@@ -192,6 +192,20 @@ input{
   </style>
 </head>
 <body>
+<style>
+    .h-logo {
+        max-width: 185px !important;
+    }
+    .f-logo{
+        max-width:220px !important;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .h-logo {
+            max-width: 110px !important;
+        }
+    }
+</style>
     <div class="entete ">
         <div class="summer" >
            <p>Summer sale For All Swims and free express Delivery-off 50% <a href="" class="show">Show now</a></p>
@@ -302,6 +316,74 @@ input{
             </div>
 
             <div class="col-md-3 col-12 col-sm-6 col-lg-3 cash-checkout ">
+            <section class="section-b-space cart-section order-details-table">
+        <div class="container  ">
+            <div class="title title1 title-effect mb-1 title-left">
+                <h2 class="mb-3">Order Details</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="col-sm-12 table-responsive" style="width: 400px;">
+                        <table class="table cart-table table-borderless " style="width: 400px;" >
+                            <tbody>
+                                <tr class="table-order" >
+                                    <td colspan="0">
+                                        <a href="javascript:void(0)">
+                                            <img src="assets/images/fashion/product/front/1.jpg" class="img-fluid blur-up lazyload" alt="">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <p class="font-light">Product Name</p>
+                                        
+                                    </td>
+                                    
+                                    <td>
+                                        <p class="font-light">Price </p>
+                                    
+                                    </td>
+                                </tr>
+
+                                
+                                
+                            </tbody>
+                            <tfoot>
+                                <tr class="table-order">
+                                    <td colspan="3">
+                                        <h5 >Subtotal :</h5>
+                                    </td>
+                                    <td>
+                                        <h4>$55.00</h4>
+                                    </td>
+                                </tr>
+
+                                <tr class="table-order">
+                                    <td colspan="3">
+                                        <h5 class="font-light">Shipping :</h5>
+                                    </td>
+                                    <td>
+                                        <h4>$12.00</h4>
+                                    </td>
+                                </tr>
+
+                                
+
+                                <tr class="table-order">
+                                    <td colspan="3">
+                                        <h4 class="theme-color fw-bold">Total Price :</h4>
+                                    </td>
+                                    <td>
+                                        <h4 class="theme-color fw-bold">$6935.00</h4>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
                 <div class="d-flex form-check">
                     <div>
                         <input class="form-check-input " type="radio" name="exampleRadios" id="option1" value="option1" >
