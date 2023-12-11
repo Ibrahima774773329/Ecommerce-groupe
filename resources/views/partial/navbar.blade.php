@@ -149,10 +149,10 @@ visibility: hidden;
     height: 400px;
 }
 .form-control{
+    width: 50vh;
     margin-bottom: 2vh;
 }
 input{
-    width: 200vh;
     background-color: #f2f2f2;
 }
 .bi-search{
@@ -195,7 +195,7 @@ input{
                         <a class="nav-link text-black" href="{{route('register')}}">Sign Up</a>
                     </li>
                 </ul>
-                    <form class="d-flex">
+                    <form class="d-flex mx-5">
                         <input class="form-control border-0" type="search" placeholder="what are you looking for?" aria-label="Search" style="  background-color: #f2f2f2;">
                         <i class="bi bi-search"></i>
                     </form>

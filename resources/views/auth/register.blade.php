@@ -1,6 +1,6 @@
 
 
-@include('partial.navbar')
+
 {{-- <x-guest-layout>
 
 
@@ -73,11 +73,49 @@
         .account{
             background-color: #db4444!important;
         }
+    .bi-search{
+        position: relative;
+        right: 3vh;
+        top: 2vh;
+    }
+    #navbarNav{
+    margin-left: 25vh;
+    /* margin-top: 8px; */
+}
     </style>
 </head>
 <body>
 
 
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+            <a class="navbar-brand text-black fw-bold fs-3" href="#">Exclusive</a>
+            <!-- Bouton de basculement pour les petits écrans -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Contenu de la barre de navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{{route('home')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{{ route('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{{route('contact')}}">Contact</a>
+                    </li>
+                    <li class="nav-item  ">
+                        <a class="nav-link text-black" href="{{route('register')}}">Sign Up</a>
+                    </li>
+                </ul>
+                    <form class="d-flex mx-5">
+                        <input class="form-control border-0" type="search" placeholder="what are you looking for?" aria-label="Search" style="  background-color: #f2f2f2;">
+                        <i class="bi bi-search"></i>
+                    </form>
+    </nav>
+    <hr>
     <div class="container py-5">
         <div class="row">
             <div class="col-lg-6 col-md-12 ">
@@ -118,8 +156,8 @@
                               {{ __('Register') }}
                         </button>
 
-                      {{-- <img src="./assets/icon-google.png" alt="" width="6%"> <a href="{{route('google-auth')}}"> Sign up with Google</a> --}}
-                      {{-- <a href="{{route('google-auth')}}">Continuer google</a> --}}
+                      <!-- {{-- <img src="./assets/icon-google.png" alt="" width="6%"> <a href="{{route('google-auth')}}"> Sign up with Google</a> --}}
+                      {{-- <a href="{{route('google-auth')}}">Continuer google</a> --}} -->
                     </div>
                       <div class="d-flex pt-3">
                         <p class="para3 me-3">Already have account?</p>
@@ -128,25 +166,18 @@
                         </a>
                     </div>
 
-                    {{-- <div class="flex items-center justify-end mt-4">
-                        <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                            {{ __('Already registered?') }}
-                        </a>
 
-                        <x-primary-button class="ml-4">
-                            {{ __('Register') }}
-                        </x-primary-button>
-                    </div> --}}
                   </form>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    @include('partial.footer')
 </body>
 </html>
 
 
 
 
-@include('partial.footer')
+
