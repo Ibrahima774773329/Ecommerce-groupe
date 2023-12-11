@@ -191,13 +191,8 @@ input{
                     <li class="nav-item">
                         <a class="nav-link text-black" href="{{route('contact')}}">Contact</a>
                     </li>
-<<<<<<< HEAD
                     <li class="nav-item">
                         <a class="nav-link text-black" href="{{route('register')}}">Sign Up</a>
-=======
-                    <li class="nav-item  ">
-                        <a class="nav-link text-black" href="#">Sign Up</a>
->>>>>>> 036493c7907ee2b3e431bd1e9506e7765b167908
                     </li>
                 </ul>
                     <form class="d-flex">
@@ -213,19 +208,19 @@ input{
                         </li>
                         <li class="nav-item ">
                         <!-- <a class="nav-link fs-5" href="#"><i class="bi bi-cart3 text-black"></i></a> -->
-      
+
                           </li>
-                       
+
                     </ul>
  <div class="container me-5">
     <div class="row">
         <div class="col-lg-12 col-sm-12 col-12">
             <div class="dropdown">
-                 
+
                 <button id="dLabel" type="button" class="btn btn-primary me-0" data-bs-toggle="dropdown">
-                <span class="badge bg-danger">{{ count((array) session('cart')) }}</span> <i class="bi bi-cart3" aria-hidden="true"></i> 
+                <span class="badge bg-danger">{{ count((array) session('cart')) }}</span> <i class="bi bi-cart3" aria-hidden="true"></i>
                 </button>
- 
+
                 <div class="dropdown-menu" aria-labelledby="dLabel">
                     <div class="row total-header-section">
                         @php $total = 0 @endphp
@@ -255,24 +250,24 @@ input{
                         </div>
                     </div>
                 </div>
-                 
+
             </div>
         </div>
     </div>
 </div>
-    
+
 <br/>
 <div class="container">
-    
+
     @if(session('success'))
         <div class="alert alert-success">
           {{ session('success') }}
-        </div> 
+        </div>
     @endif
-    
+
     @yield('content')
 </div>
-    
+
 
             </div>
         </div>
