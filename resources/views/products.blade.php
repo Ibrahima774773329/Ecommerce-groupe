@@ -217,7 +217,7 @@ color: #fff;
       <div class="col-md-3 col-12 col-sm-6 col-lg-3">
         <div class="card w-100 border-0 " style=" background-color: #f2f2f2;height: 250px;">
           <img src="{{ asset('img') }}/{{ $product->photo }}" class="card-img-top w-50 mx-5 py-2 m-4 col-md-3 col-12 col-sm-6 col-lg-3" alt="Image 1">
-             <button class="bg-dark text-white mt-5 py-1 add1  "> <a href="{{ route('add_to_cart', $product->id) }}">Add To Cart</button>
+             <button class="bg-dark text-white mt-5 py-1 add1  "> <a href="{{ route('add_to_cart', $product->id) }}"><i class="fa fa-trash-o"></i>Add To Cart</button>
           <div class="icon-heart-eye ">
           <a href=""><i class="bi bi-archive"></i> </a>
             <h6 class="promo">-35%</h6>
