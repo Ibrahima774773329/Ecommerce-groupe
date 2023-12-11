@@ -10,6 +10,7 @@
     <link href="{{ url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="{{asset('style.css')}}"/>
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <title>navbar</title>
 </head>
 <body>
@@ -190,8 +191,13 @@ input{
                     <li class="nav-item">
                         <a class="nav-link text-black" href="{{route('contact')}}">Contact</a>
                     </li>
+<<<<<<< HEAD
                     <li class="nav-item">
                         <a class="nav-link text-black" href="{{route('register')}}">Sign Up</a>
+=======
+                    <li class="nav-item  ">
+                        <a class="nav-link text-black" href="#">Sign Up</a>
+>>>>>>> 036493c7907ee2b3e431bd1e9506e7765b167908
                     </li>
                 </ul>
                     <form class="d-flex">
@@ -203,16 +209,75 @@ input{
                         <a class="nav-link fs-5" href="#"><i class="bi bi-suit-heart text-black"></i></a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link fs-5" href="#"><i class="bi bi-cart3 text-black"></i></a>
-                        </li>
-                        <li class="nav-item">
                         <a class="nav-link fs-5" href="#"><i class="bi bi-person text-black"></i></a>
                         </li>
+                        <li class="nav-item ">
+                        <!-- <a class="nav-link fs-5" href="#"><i class="bi bi-cart3 text-black"></i></a> -->
+      
+                          </li>
+                       
                     </ul>
+ <div class="container me-5">
+    <div class="row">
+        <div class="col-lg-12 col-sm-12 col-12">
+            <div class="dropdown">
+                 
+                <button id="dLabel" type="button" class="btn btn-primary me-0" data-bs-toggle="dropdown">
+                <span class="badge bg-danger">{{ count((array) session('cart')) }}</span> <i class="bi bi-cart3" aria-hidden="true"></i> 
+                </button>
+ 
+                <div class="dropdown-menu" aria-labelledby="dLabel">
+                    <div class="row total-header-section">
+                        @php $total = 0 @endphp
+                        @foreach((array) session('cart') as $id => $details)
+                            @php $total += $details['price'] * $details['quantity'] @endphp
+                        @endforeach
+                        <div class="col-lg-12 col-sm-12 col-12 total-section text-right">
+                            <p>Total: <span class="text-success">$ {{ $total }}</span></p>
+                        </div>
+                    </div>
+                    @if(session('cart'))
+                        @foreach(session('cart') as $id => $details)
+                            <div class="row cart-detail ">
+                                <div class="col-lg-4 col-sm-4 col-4 cart-detail-img">
+                                    <img src="{{ asset('img') }}/{{ $details['photo'] }}" />
+                                </div>
+                                <div class="col-lg-8 col-sm-8 col-8 cart-detail-product">
+                                    <p>{{ $details['product_name'] }}</p>
+                                    <span class="price text-success"> ${{ $details['price'] }}</span> <span class="count"> Quantity:{{ $details['quantity'] }}</span>
+                                </div>
+                            </div>
+                        @endforeach
+                    @endif
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-12 text-center checkout">
+                            <a href="{{ route('cart') }}" class="btn btn-primary btn-block">View all</a>
+                        </div>
+                    </div>
+                </div>
+                 
+            </div>
+        </div>
+    </div>
+</div>
+    
+<br/>
+<div class="container">
+    
+    @if(session('success'))
+        <div class="alert alert-success">
+          {{ session('success') }}
+        </div> 
+    @endif
+    
+    @yield('content')
+</div>
+    
+
             </div>
         </div>
 </nav>
-
+@yield('scripts')
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>

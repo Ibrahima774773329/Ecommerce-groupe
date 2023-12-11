@@ -208,6 +208,7 @@ input{
                         <a class="nav-link fs-4" href="#"><i class="bi bi-person text-black"></i></a>
                         </li>
                     </ul>
+                    
             </div>
         </div>
     </nav>
