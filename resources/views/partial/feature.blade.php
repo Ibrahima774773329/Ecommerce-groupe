@@ -8,7 +8,7 @@
 <body>
 
     <style>
-          .title1{
+   .title1{
     font-weight: bold;
     }
     .para1{

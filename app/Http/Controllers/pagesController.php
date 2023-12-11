@@ -11,6 +11,11 @@ class pagesController extends Controller
         return view('index');
     }
 
+    public function welcome()
+    {
+        return view('welcome');
+    }
+
     public function about()
     {
         return view('about');

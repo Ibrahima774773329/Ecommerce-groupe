@@ -22,7 +22,7 @@ Route::patch('update-cart', [ProductsController::class, 'update'])->name('update
 Route::delete('remove-from-cart', [ProductsController::class, 'remove'])->name('remove_from_cart');
 
 
-
+Route::get('/welcome',[pagesController::class, 'welcome'])->name('welcome');
 Route::get('/home',[pagesController::class, 'index'])->name('home');
 Route::get('/about',[pagesController::class, 'about'])->name('about');
 Route::get('/footer',[pagesController::class, 'footer'])->name('footer');
@@ -34,8 +34,9 @@ Route::get('/details',[pagesController::class, 'details'])->name('details');
 Route::get('/sign-up',[pagesController::class, 'register'])->name('register');
 
 Route::get('/', function () {
-    return view('index');
+    return view('welcome');
 });
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

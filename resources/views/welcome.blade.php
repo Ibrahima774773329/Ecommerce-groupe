@@ -1,132 +1,1252 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url('https://fonts.googleapis.com/css?family=Inter%3A700')}}"/>
+    <link rel="stylesheet" href="{{ url('https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C700')}}"/>
+    <link rel="stylesheet" href="{{ url('https://fonts.googleapis.com/css?family=Poppins%3A400%2C500')}}"/>
+    <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css')}}">
+    <link href="{{ url('https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{asset('style.css')}}"/>
 
-        <title>Laravel</title>
 
-        <!-- Fonts -->
-        <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>navbar</title>
+</head>
+<body>
+    <style>
+        /* startttt detailscart */
+  .entete{
+    position: relative;
+    height: 48px;
+    background-color: black;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+  }
+  .langue{
+   position: relative;
+   left: 300px;
+  }
+  .show {
+    position: relative;
+    left: 5px;
+   color: aliceblue;
+  }
+  header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 10%;
+}
+.logo{
+    position: relative;
+    font-family: fantasy;
+    color: black;
+    text-decoration: none;
+    right: 150px;
+}
 
-        <!-- Styles -->
-        <style>
-            /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}a{background-color:transparent}[hidden]{display:none}html{font-family:system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;line-height:1.5}*,:after,:before{box-sizing:border-box;border:0 solid #e2e8f0}a{color:inherit;text-decoration:inherit}svg,video{display:block;vertical-align:middle}video{max-width:100%;height:auto}.bg-white{--tw-bg-opacity: 1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-gray-100{--tw-bg-opacity: 1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.border-gray-200{--tw-border-opacity: 1;border-color:rgb(229 231 235 / var(--tw-border-opacity))}.border-t{border-top-width:1px}.flex{display:flex}.grid{display:grid}.hidden{display:none}.items-center{align-items:center}.justify-center{justify-content:center}.font-semibold{font-weight:600}.h-5{height:1.25rem}.h-8{height:2rem}.h-16{height:4rem}.text-sm{font-size:.875rem}.text-lg{font-size:1.125rem}.leading-7{line-height:1.75rem}.mx-auto{margin-left:auto;margin-right:auto}.ml-1{margin-left:.25rem}.mt-2{margin-top:.5rem}.mr-2{margin-right:.5rem}.ml-2{margin-left:.5rem}.mt-4{margin-top:1rem}.ml-4{margin-left:1rem}.mt-8{margin-top:2rem}.ml-12{margin-left:3rem}.-mt-px{margin-top:-1px}.max-w-6xl{max-width:72rem}.min-h-screen{min-height:100vh}.overflow-hidden{overflow:hidden}.p-6{padding:1.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.pt-8{padding-top:2rem}.fixed{position:fixed}.relative{position:relative}.top-0{top:0}.right-0{right:0}.shadow{--tw-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1);--tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.text-center{text-align:center}.text-gray-200{--tw-text-opacity: 1;color:rgb(229 231 235 / var(--tw-text-opacity))}.text-gray-300{--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}.text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}.text-gray-600{--tw-text-opacity: 1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-700{--tw-text-opacity: 1;color:rgb(55 65 81 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity: 1;color:rgb(17 24 39 / var(--tw-text-opacity))}.underline{text-decoration:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.w-5{width:1.25rem}.w-8{width:2rem}.w-auto{width:auto}.grid-cols-1{grid-template-columns:repeat(1,minmax(0,1fr))}@media (min-width:640px){.sm\:rounded-lg{border-radius:.5rem}.sm\:block{display:block}.sm\:items-center{align-items:center}.sm\:justify-start{justify-content:flex-start}.sm\:justify-between{justify-content:space-between}.sm\:h-20{height:5rem}.sm\:ml-0{margin-left:0}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pt-0{padding-top:0}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width:768px){.md\:border-t-0{border-top-width:0}.md\:border-l{border-left-width:1px}.md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (min-width:1024px){.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (prefers-color-scheme:dark){.dark\:bg-gray-800{--tw-bg-opacity: 1;background-color:rgb(31 41 55 / var(--tw-bg-opacity))}.dark\:bg-gray-900{--tw-bg-opacity: 1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:border-gray-700{--tw-border-opacity: 1;border-color:rgb(55 65 81 / var(--tw-border-opacity))}.dark\:text-white{--tw-text-opacity: 1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:text-gray-400{--tw-text-opacity: 1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-gray-500{--tw-text-opacity: 1;color:rgb(107 114 128 / var(--tw-text-opacity))}}
-        </style>
+.nav-icon{
+    position: relative;
+    right: 200px;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    color: black;
+    font-size: 30px;
 
-        <style>
-            body {
-                font-family: 'Nunito', sans-serif;
-            }
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
-                <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-                    @auth
-                        <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
-                    @else
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
+}
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+.nav-icon a{
+   position: relative;
+   left: 100px;
+   color: gray;
+   text-decoration: none;
+   transition: all .42s ease;
+}
 
-            <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto text-gray-700 sm:h-20">
-                        <g clip-path="url(#clip0)" fill="#EF3B2D">
-                            <path d="M248.032 44.676h-16.466v100.23h47.394v-14.748h-30.928V44.676zM337.091 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.431 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162-.001 2.863-.479 5.584-1.432 8.161zM463.954 87.202c-2.101-3.341-5.083-5.965-8.949-7.875-3.865-1.909-7.756-2.864-11.669-2.864-5.062 0-9.69.931-13.89 2.792-4.201 1.861-7.804 4.417-10.811 7.661-3.007 3.246-5.347 6.993-7.016 11.239-1.672 4.249-2.506 8.713-2.506 13.389 0 4.774.834 9.26 2.506 13.459 1.669 4.202 4.009 7.925 7.016 11.169 3.007 3.246 6.609 5.799 10.811 7.66 4.199 1.861 8.828 2.792 13.89 2.792 3.913 0 7.804-.955 11.669-2.863 3.866-1.908 6.849-4.533 8.949-7.875v9.021h15.607V78.182h-15.607v9.02zm-1.432 32.503c-.955 2.578-2.291 4.821-4.009 6.73-1.719 1.91-3.795 3.437-6.229 4.582-2.435 1.146-5.133 1.718-8.091 1.718-2.96 0-5.633-.572-8.019-1.718-2.387-1.146-4.438-2.672-6.156-4.582-1.719-1.909-3.032-4.152-3.938-6.73-.909-2.577-1.36-5.298-1.36-8.161 0-2.864.451-5.585 1.36-8.162.905-2.577 2.219-4.819 3.938-6.729 1.718-1.908 3.77-3.437 6.156-4.582 2.386-1.146 5.059-1.718 8.019-1.718 2.958 0 5.656.572 8.091 1.718 2.434 1.146 4.51 2.674 6.229 4.582 1.718 1.91 3.054 4.152 4.009 6.729.953 2.577 1.432 5.298 1.432 8.162 0 2.863-.479 5.584-1.432 8.161zM650.772 44.676h-15.606v100.23h15.606V44.676zM365.013 144.906h15.607V93.538h26.776V78.182h-42.383v66.724zM542.133 78.182l-19.616 51.096-19.616-51.096h-15.808l25.617 66.724h19.614l25.617-66.724h-15.808zM591.98 76.466c-19.112 0-34.239 15.706-34.239 35.079 0 21.416 14.641 35.079 36.239 35.079 12.088 0 19.806-4.622 29.234-14.688l-10.544-8.158c-.006.008-7.958 10.449-19.832 10.449-13.802 0-19.612-11.127-19.612-16.884h51.777c2.72-22.043-11.772-40.877-33.023-40.877zm-18.713 29.28c.12-1.284 1.917-16.884 18.589-16.884 16.671 0 18.697 15.598 18.813 16.884h-37.402zM184.068 43.892c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002-35.648-20.524a2.971 2.971 0 00-2.964 0l-35.647 20.522-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v38.979l-29.706 17.103V24.493a3 3 0 00-.103-.776c-.024-.088-.073-.165-.104-.25-.058-.157-.108-.316-.191-.46-.056-.097-.137-.176-.203-.265-.087-.117-.161-.242-.265-.345-.085-.086-.194-.148-.29-.223-.109-.085-.206-.182-.327-.252l-.002-.001-.002-.002L40.098 1.396a2.971 2.971 0 00-2.964 0L1.487 21.919l-.002.002-.002.001c-.121.07-.219.167-.327.252-.096.075-.205.138-.29.223-.103.103-.178.228-.265.345-.066.089-.147.169-.203.265-.083.144-.133.304-.191.46-.031.085-.08.162-.104.25-.067.249-.103.51-.103.776v122.09c0 1.063.568 2.044 1.489 2.575l71.293 41.045c.156.089.324.143.49.202.078.028.15.074.23.095a2.98 2.98 0 001.524 0c.069-.018.132-.059.2-.083.176-.061.354-.119.519-.214l71.293-41.045a2.971 2.971 0 001.489-2.575v-38.979l34.158-19.666a2.971 2.971 0 001.489-2.575V44.666a3.075 3.075 0 00-.106-.774zM74.255 143.167l-29.648-16.779 31.136-17.926.001-.001 34.164-19.669 29.674 17.084-21.772 12.428-43.555 24.863zm68.329-76.259v33.841l-12.475-7.182-17.231-9.92V49.806l12.475 7.182 17.231 9.92zm2.97-39.335l29.693 17.095-29.693 17.095-29.693-17.095 29.693-17.095zM54.06 114.089l-12.475 7.182V46.733l17.231-9.92 12.475-7.182v74.537l-17.231 9.921zM38.614 7.398l29.693 17.095-29.693 17.095L8.921 24.493 38.614 7.398zM5.938 29.632l12.475 7.182 17.231 9.92v79.676l.001.005-.001.006c0 .114.032.221.045.333.017.146.021.294.059.434l.002.007c.032.117.094.222.14.334.051.124.088.255.156.371a.036.036 0 00.004.009c.061.105.149.191.222.288.081.105.149.22.244.314l.008.01c.084.083.19.142.284.215.106.083.202.178.32.247l.013.005.011.008 34.139 19.321v34.175L5.939 144.867V29.632h-.001zm136.646 115.235l-65.352 37.625V148.31l48.399-27.628 16.953-9.677v33.862zm35.646-61.22l-29.706 17.102V66.908l17.231-9.92 12.475-7.182v33.841z"/>
-                        </g>
+.nav-icon a:hover{
+  transform: scale(1.1);
+  color: rosybrown;
+}
+.btn1{
+    width: 200px;
+    height: 38px;
+    border: gainsboro;
+    background-color: gainsboro;
+    padding-right: 50px;
+}
+
+#menu-icon{
+font-size: 35px;
+z-index: 10001 ;
+cursor: pointer;
+left: 60px;
+visibility: hidden;
+
+}
+.navbar{
+    position: relative;
+    right: 150px;
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     list-style: none;
+}
+.navbar a{
+   color: black;
+   font-size: 1;
+   font-weight: 400;
+   padding: 10px 20px;
+   margin: 0px 30;
+   transition: all .5s ease ;
+   text-decoration: none;
+}
+.navbar a li{
+   text-decoration: none;
+}
+.navbar a:hover{
+   color: rosybrown;
+}
+.navbar a:active{
+   color: green;
+}
+.ligne{
+    position: relative;
+    top: 80px;
+    color: blueviolet;
+}
+.section-1{
+    position: relative;
+    top :150px;
+    left: 90px;
+    color: gainsboro;
+}
+.section-1:hover{
+    color: black;
+}
+ #navbarNav{
+    margin-left: 25vh;
+}
+.navbar-brand{
+    margin-left:25vh;
+}
+.carousel-item img{
+    width:150vh;
+    height: 400px;
+}
+.form-control{
+    margin-bottom: 1vh;
+      width: 30vh;
+}
+input{
+    background-color: #f2f2f2;
+}
+.bi-search{
+  position: relative;
+  right: 3vh;
+  top: 2vh;
+}
+.rectangle{
+        margin-right: 1.6rem;
+        width: 1.2rem;
+        height: 2.5rem;
+        background-color: #db4444;
+        border-radius: 0.4rem;
+        flex-shrink: 0;
+     }
+     .our-products{
+        color: #db4444;
+        font-weight: bold;
+    }
+    .icon-heart-eye i{
+        background-color: #fff;
+        border-radius: 50%;
+        padding: 8px;
+        font-size: large;
+    }
+    .icon-heart-eye a{
+        color: #000;
+        margin: 10px;
+    }
+    .icon-heart-eye{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+        bottom: 220px;
+    }
+    .stars .bi-star-fill{
+        color: #e8c70ce0;
+    }
+    .stars .start-fil{
+        color: #939191e7;
+    }
+    .star{
+        margin-bottom: 10vh;
+    }
+    .image-color-change img{
+        width: 50px;
+        position: relative;
+        bottom: 30px;
+    }
+    div .semi-clone{
+        width: 0.4rem;
+        height: 1.6rem;
+        margin: 1.6rem 1.7rem 0rem 0rem;
+    }
+    .image-fill a{
+        color: #000;
+    }
+    .image-fill{
+        justify-content: center;
+        text-align: center;
+        margin-left:80%;
+
+    }
+    .image-fill i{
+        background-color:#f2f2f2;
+        border-radius: 50%;
+        padding:10px;
+        font-size: 24px;
+        }
+
+    .head{
+        display: flex;
+
+        position: relative;
+        top: 20px;
+      }
+
+    .cares{
+        position: relative;
+        left: -10px;
+
+        background-color: red;
+        color: red;
+        width: 35px;
+        height: 20px;
+        border-radius: 10px;
+    }
+
+      .titre-1{
+        position: relative;
+        right: 50px;
+      }
+
+      .flech1 {
+        position: relative;
+        left: 200px;
+        top: 20px;
+        width: 50px;
+        height: 50px;
+        left: 600px;
+        border-radius: 50%;
+        background-color: gainsboro;
+        border: 1px solid gainsboro;
+
+      }
+
+      .cartCategorie{
+          display: flex;
+        left: 20px;
+          position: relative;
+          top: 50px;
+          gap: 30px;
+          overflow-x: auto;
+          font-size: 0px;
+          scrollbar-width: none;
+
+      }
+      .cartCategorie::-webkit-scrollbar{
+        display: none;
+      }
+      .category-phone {
+        border: 1px solid black;
+        padding: 20px;
+        width: 100px;
+        height: 150px;
+      }
+      .category-phone:hover {
+        background-color: red;
+      }
+      .category-phone3 {
+        border: 1px solid black;
+        padding: 20px;
+        width: 250px;
+        height: 150px;
+      }
+
+      .category-phone3:hover {
+        background-color: red;
+      }
+      .phones {
+        font-size: 25px;
+
+      color: black;
+      text-decoration: underline;
+      }
+
+      .phones a{
+       text-decoration: none;
+      }
+      .phones:hover {
+        color: aliceblue;
+      }
+      .phones1 {
+        position: relative;
+        font-size: 25px;
+        left: 40px;
+        color: black;
+        text-decoration: underline;
+      }
+
+      .phones1 a{
+       text-decoration: none;
+      }
+
+      .phones1:hover {
+        color: aliceblue;
+      }
+      .phones3 {
+        position: relative;
+        font-size: 25px;
+        left: 40px;
+        color: black;
+        text-decoration: underline;
+      }
+
+      .phones3 a{
+       text-decoration: none;
+      }
+
+      .phones3:hover {
+        color: aliceblue;
+      }
+      .category-img:hover {
+        color: aliceblue;
+      }
+
+      .phones2 {
+        position: relative;
+        font-size: 25px;
+        left: 10px;
+        color: black;
+        text-decoration: underline;
+      }
+      .phones2 a{
+       text-decoration: none;
+      }
+      .phones2:hover {
+        color: aliceblue;
+      }
+      .phones4 {
+        position: relative;
+        font-size: 25px;
+        left: 60px;
+        color: black;
+        text-decoration: underline;
+      }
+      .phones4 a{
+       text-decoration: none;
+      }
+      .phones4:hover {
+        color: aliceblue;
+      }
+      .icone{
+          width: 200px;
+         color: black;
+         font-weight: 800px;
+         font-size: 60px;
+      }
+      .icone a{
+         text-decoration: none;
+      }
+      .icone:hover{
+        color: aliceblue;
+      }
+      .icone1{
+        position: relative;
+        right: 30px;
+        width: 200px;
+        color: black;
+        font-weight: 800px;
+        font-size: 60px;
+      }
+      .icone1 a{
+       text-decoration: none;
+      }
+      .icone1:hover{
+      color: aliceblue;
+      }
+      @media only screen and (max-width: 768px){
+        .head .flech1{
+            display: none !important;
+        }
+        .cartCategorie{
+            gap: 20px;
+            display: grid;
+            grid-template-columns: auto;
+            width: 100%;
+        }
+         .titre-1{
+            position: relative;
+            left: 20px;
+          }
+          .categories{
+            position: relative;
+            left: 30px;
+          }
+      }
+      .title1{
+    font-weight: bold;
+    }
+    .para1{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.footer{
+
+display: flex;
+justify-content: space-around;
+}
+.footer1{
+background-color: black;
+}
+ul{
+margin-right: 40px;
+}
+ul li , h4{
+list-style: none;
+font-size: 15px;
+margin-bottom: 20px;
+}
+input{
+background-color: black;
+outline: none;
+border: none;
+}
+.div1{
+border: 1px solid white;
+border-radius: 3px;
+padding: 7px;
+}
+.rso{
+display: flex;
+justify-content: space-between;
+
+}
+.cop{
+display: flex;
+justify-content: center;
+color: rgb(204, 204, 197);
+}
+.cop1{
+width: 20px;
+height: 20px;
+margin-right: 10px;
+
+}
+  </style>
+
+    <div class="entete ">
+        <div class="summer" >
+           <p>Summer sale For All Swims and free express Delivery-off 50% <a href="" class="show">Show now</a></p>
+        </div>
+        <div class="langue">
+            <p>English <span><ion-icon class="" name="chevron-down-outline"></ion-icon></span></p>
+        </div>
+    </div>
+    <!-- headersss -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand text-black fw-bold fs-3" href="#">Exclusive</a>
+            <!-- Bouton de basculement pour les petits écrans -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Contenu de la barre de navigation -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{{route('home')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{{ route('about') }}">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{{route('contact')}}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="{{route('register')}}">Sign Up</a>
+                    </li>
+                </ul>
+                    <form class="d-flex mx-5">
+                        <input class="form-control border-0" type="search" placeholder="what are you looking for?" aria-label="Search" style="  background-color: #f2f2f2;">
+                        <i class="bi bi-search"></i>
+                    </form>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link fs-5" href="#"><i class="bi bi-suit-heart text-black"></i></a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link fs-5" href="#"><i class="bi bi-person text-black"></i></a>
+                        </li>
+                        <li class="nav-item ">
+                        <a class="nav-link fs-5" href="#"><i class="bi bi-cart3 text-black"></i></a>
+                          </li>
+                    </ul>
+</nav>
+<hr>
+    <!-- header -->
+<div class="d-flex mx-2 py-5 text-center">
+        <div class="mx-5">
+            <div class="d-flex">
+            <div>
+                <p>Woman's Fashion</p></div>
+                <div class="mx-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
                     </svg>
                 </div>
+            </div>
+            <div class="d-flex">
+                <div>
+                    <p>Men's Fashion</p>
+                </div>
+                <div class="mx-5">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+            </div>
+            <p class="">Electronics</p>
+            <p class="">Home & Lifestyle</p>
+            <p class="">Medicine</p>
+            <p class="">Sports & Outdoor</p>
+            <p class="">Baby’s & Toys</p>
+            <p class="">Groceries & Pets</p>
+            <p class="">Health & Beauty</p>
+        </div>
 
-                <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <div class="p-6">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel.com/docs" class="underline text-gray-900 dark:text-white">Documentation</a></div>
-                            </div>
 
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
-                            </div>
+  <div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/heroendframecvklg0xk3w6elarge-2-WVY.png" class="d-block  " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/heroendframecvklg0xk3w6elarge-2-y9U.png" class="d-block " alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/heroendframecvklg0xk3w6elarge-2-WVY.png" class="d-block" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<!-- sales -->
+
+<div class=" py-5">
+
+    <div class="  mx-5">
+        <div class="d-flex mx-3">
+            <div class="rectangle"></div>
+            <p class="our-products ">Today's</p>
+        </div>
+      <div class="d-flex  ">
+            <div class="">
+                <p class="fs-1 fw-bold mx-4">Flash Sales</p>
+            </div>
+            <div class="mx-5 ">
+                <p class="small">Days</p>
+                <p class="fw-bold fs-2 number">03</p>
+            </div>
+            <img src="assets/semiclone-a5G.png" alt="" class="semi-clone">
+            <div class="mx-5">
+                <p class="small">Hours</p>
+                <p class="fw-bold fs-2 number">23</p>
+            </div>
+            <img src="assets/semiclone-a5G.png" alt="" class="semi-clone">
+          <div class="mx-5">
+              <p class="small">minutes</p>
+              <p class="fw-bold fs-2 number">19</p>
+          </div>
+          <img src="assets/semiclone-a5G.png" alt="" class="semi-clone">
+          <div class="mx-5">
+            <p class="small">Seconds</p>
+            <p class="fw-bold fs-2 number">56</p>
+        </div>
+      </div>
+    </div>
+    <div class="image-fill ">
+      <a href=""><i class="bi bi-arrow-left  "></i></a>
+      <a href=""><i class="bi bi-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+
+ <div class="container ">
+        <div class="row">
+            <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                  <a href="{{route('details')}}"><img src="assets/g92-2-500x500-1-15L.png" alt="" class="card-img-top mx-5 h-50 w-50 mt-5 col-md-3 col-12 col-sm-6 col-lg-3"></a>
+                    <div class="icon-heart-eye py-5">
+                        <a href=""><i class="bi bi-suit-heart"></i> </a>
+                        <a href=""><i class="bi bi-eye"></i></a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h6 class="card-title">GP11 Shooter USB Gamepad</h6>
+                    <div class="d-flex">
+                        <p class="text-danger py-3 fw-bold">$120 <span class="text-black py-3 mx-2 text-decoration-line-through fw-bold">$160</span></p>
+                    </div>
+                    <div class="stars d-flex ">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <p class="text-en-gras  mx-2 fw-bold">(55)</p>
+                     </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                  <a href="{{route('details')}}">  <img src="assets/ak-900-01-500x500-1-3w8.png" alt="" class="card-img-top mx-5 h-50 w-50 mt-4 col-md-3 col-12 col-sm-6 col-lg-3"></a>
+                    <button type="submit" form="" class="bg-dark text-white mt-5 py-2 btn-cart">Add To Cart</button>
+                    <div class="icon-heart-eye py-1">
+                        <a href=""><i class="bi bi-suit-heart"></i> </a>
+                        <a href=""><i class="bi bi-eye"></i></a>
+                    </div>
+                </div>
+                    <div class="card-body mx-2">
+                        <h6 class="card-title">AK-900 Wired Keyboard</h6>
+                        <div class="d-flex">
+                            <p class="text-danger py-3 fw-bold">$960 <span class="text-black py-3 mx-2 text-decoration-line-through fw-bold">$1160</span></p>
                         </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-t-0 md:border-l">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laracasts.com" class="underline text-gray-900 dark:text-white">Laracasts</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold"><a href="https://laravel-news.com/" class="underline text-gray-900 dark:text-white">Laravel News</a></div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="p-6 border-t border-gray-200 dark:border-gray-700 md:border-l">
-                            <div class="flex items-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-gray-500"><path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" /></svg>
-                                <div class="ml-4 text-lg leading-7 font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</div>
-                            </div>
-
-                            <div class="ml-12">
-                                <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline">Forge</a>, <a href="https://vapor.laravel.com" class="underline">Vapor</a>, <a href="https://nova.laravel.com" class="underline">Nova</a>, and <a href="https://envoyer.io" class="underline">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline">Telescope</a>, and more.
-                                </div>
-                            </div>
+                        <div class="stars mx-2 py-2 d-flex">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill start-fil"></i>
+                            <i class="bi bi-star-fill start-fil"></i>
+                            <p class="text-en-gras  fw-bold">(75)</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="flex justify-center mt-4 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 sm:text-left">
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="-mt-px w-5 h-5 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                            </svg>
-
-                            <a href="https://laravel.bigcartel.com" class="ml-1 underline">
-                                Shop
-                            </a>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="ml-4 -mt-px w-5 h-5 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                            </svg>
-
-                            <a href="https://github.com/sponsors/taylorotwell" class="ml-1 underline">
-                                Sponsor
-                            </a>
+                <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                    <div class="card  border-0" style=" background-color: #f2f2f2;height: 250px;">
+                        <img src="assets/g92-2-500x500-1-15L.png" alt="" class="card-img-top mx-5 h-50 w-50 mt-5 col-md-3 col-12 col-sm-6 col-lg-3">
+                        <div class="icon-heart-eye py-5">
+                            <a href=""><i class="bi bi-suit-heart"></i> </a>
+                            <a href=""><i class="bi bi-eye"></i></a>
                         </div>
                     </div>
+                    <div class="card-body">
+                        <h6 class="card-title">GP11 Shooter USB Gamepad</h6>
+                        <div class="d-flex">
+                            <p class="text-danger py-3 fw-bold">$120 <span class="text-black py-3 mx-2 text-decoration-line-through fw-bold">$160</span></p>
+                        </div>
+                        <div class="stars d-flex ">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <p class="text-en-gras  mx-2 fw-bold">(55)</p>
+                        </div>
+                    </div>
+                </div>
 
-                    <div class="ml-4 text-center text-sm text-gray-500 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
+                <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                    <div class="card  border-0" style=" background-color: #f2f2f2;height: 250px;">
+                        <img src="assets/g92-2-500x500-1-15L.png" alt="" class="card-img-top mx-5 h-50 w-50 mt-5 col-md-3 col-12 col-sm-6 col-lg-3">
+                        <div class="icon-heart-eye py-5">
+                            <a href=""><i class="bi bi-suit-heart"></i> </a>
+                            <a href=""><i class="bi bi-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="card-title">GP11 Shooter USB Gamepad</h6>
+                        <div class="d-flex">
+                            <p class="text-danger py-3 fw-bold">$120 <span class="text-black py-3 mx-2 text-decoration-line-through fw-bold">$160</span></p>
+                        </div>
+                        <div class="stars d-flex ">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <p class="text-en-gras  mx-2 fw-bold">(55)</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class=" mx-auto  col-12 col-md-3 col-sm-6 col-lg-6 ">
+       <a href="{{route('register')}}"> <button class="btn btn-lg btn-danger btn-button mx-5" type="button">View All Products</button></a>
+        </div>
+</div>
+
+    <!-- category -->
+
+    <div class="container-fluid p-0 mb-5 py-5">
+      <div class="container ">
+        <div class="categories">
+          <h6 style="color: red;"> <span class="cares">x</span>Categories</h6>
+        </div>
+        <div class="head">
+          <div class="col-sm-4">
+            <h1 class="titre-1 ">Browse By Category</h1>
+          </div>
+          <div class="">
+            <button id="prev" class="flech1 "><ion-icon name="arrow-forward"></ion-icon></button>
+            <button id="next" class="flech1 "><ion-icon name="arrow-back"></ion-icon></button>
+        </div>
+      </div>
+      <div class="cartCategorie">
+          <div class="category-phone col-sm-4">
+            <a href="">
+              <ion-icon class="icone1" name="phone-portrait-outline"></ion-icon>
+            </a>
+            <p class="phones1 text-decoration-none">Phone</p>
+          </div>
+          <div class="category-phone col-sm-4">
+            <a href="">
+              <ion-icon class="icone1" name="desktop-outline"></ion-icon>
+            </a>
+            <p class="phones2 text-decoration-none">Computers</p>
+          </div>
+          <div class="category-phone3 col-sm-4">
+            <a href="">
+              <ion-icon class="icone" name="watch-outline"></ion-icon>
+            </a>
+            <p class="phones3 text-decoration-none">SmartWatch</p>
+          </div>
+
+          <div class="category-phone3 col-sm-4">
+            <a href="">
+              <ion-icon class="icone" name="camera-outline"></ion-icon>
+            </a>
+            <p class="phones4 text-decoration-none">Camera</p>
+          </div>
+
+          <div class="category-phone3 col-sm-4">
+            <a href="">
+              <ion-icon class="icone" name="headset-outline"></ion-icon>
+            </a>
+            <p class="phones3 text-decoration-none"> HeadPhones</p>
+          </div>
+
+          <div class="category-phone3 col-sm-4">
+            <a href="">
+              <ion-icon class="icone" name="headset-outline"></ion-icon>
+            </a>
+            <p class="phones3 text-decoration-none"> HeadPhones</p>
+          </div>
+
+          <div class="category-phone3 col-sm-4">
+            <a href="">
+              <ion-icon class="icone" name="headset-outline"></ion-icon>
+            </a>
+            <p class="phones3 text-decoration-none"> HeadPhones</p>
+          </div>
+        </div>
+    </div>
+
+    <!-- selling -->
+    <div class="py-5 mt-5">
+        <div class="  mx-5">
+            <div class="d-flex mx-3">
+                <div class="rectangle"></div>
+                <p class="our-products ">This Month</p>
+            </div>
+            <p class="fs-1 fw-bold mx-4">Best Selling Products</p>
+        </div>
+        <div class="image-fill ">
+            <button class="btn-lg border-0" style=" background-color:#db4444;color: #fff;width: 40%; padding: 5px;">View All</button>
+        </div>
+    </div>
+    <div class="container py-0 content">
+        <div class="row">
+            <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                    <img src="assets/zah9d56260021000000light-the-north-face-x-gucci-coat-1.png" alt="" class="card-img-top mx-5 mt-5 h-50 w-50 col-md-3 col-12 col-sm-6 col-lg-3">
+                    <div class="icon-heart-eye mt-5 py-3">
+                        <a href=""><i class="bi bi-suit-heart"></i> </a>
+                        <a href=""><i class="bi bi-eye"></i></a>
+                    </div>
+                </div>
+                <div class="card-body mx-3">
+                    <h6 class="card-title">The north coat</h6>
+                        <div class="d-flex">
+                            <p class="text-danger  fw-bold">$260 <span class="text-black py-3 mx-2 text-decoration-line-through fw-bold">$360</span></p>
+                        </div>
+                        <div class="stars mx-2 d-flex">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill start-fil"></i>
+                            <i class="bi bi-star-fill start-fil"></i>
+                            <p class="text-en-gras  fw-bold">(65)</p>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                    <img src="assets/c2st87460010820000light-gucci-savoy-medium-duffle-bag-1-3sx.png" alt="" class="card-img-top h-80 w-60 mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
+                    <div class="icon-heart-eye">
+                    <a href=""><i class="bi bi-suit-heart"></i> </a>
+                    <a href=""><i class="bi bi-eye"></i></a>
+                    </div>
+                </div>
+                <div class="card-body mx-3">
+                    <h6 class="card-title">Gucci duffle bag</h6>
+                    <div class="d-flex">
+                        <p class="text-danger fw-bold">$960 <span class="text-black py-3 mx-2 text-decoration-line-through fw-bold">$1160</span></p>
+                    </div>
+                    <div class="stars  d-flex">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill start-fil"></i>
+                        <i class="bi bi-star-fill start-fil"></i>
+                        <p class="text-en-gras  fw-bold">(65)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                    <img src="assets/gammaxx-l240-argb-1-500x500-1-Kdk.png" alt="" class="card-img-top h-80 w-80  mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
+                    <div class="icon-heart-eye                  ">
+                        <a href=""><i class="bi bi-suit-heart"></i> </a>
+                        <a href=""><i class="bi bi-eye"></i></a>
+                    </div>
+                </div>
+                <div class="card-body mx-3">
+                    <h6 class="card-title">RGB liquid CPU Cooler</h6>
+                    <div class="d-flex">
+                        <p class="text-danger  fw-bold">$160 <span class="text-black py-3 mx-2 text-decoration-line-through fw-bold">$170</span></p>
+                    </div>
+                    <div class="stars mx-2 d-flex">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill start-fil"></i>
+                        <i class="bi bi-star-fill start-fil"></i>
+                        <p class="text-en-gras  fw-bold">(65)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                    <img src="assets/sam-moghadam-khamseh-l7mqshlau-unsplash-1.png" alt="" class="card-img-top h-90 w-60 mb-5 col-md-3 col-12 col-sm-6 col-lg-3">
+                    <div class="icon-heart-eye mt-3">
+                    <a href=""><i class="bi bi-suit-heart"></i> </a>
+                    <a href=""><i class="bi bi-eye"></i></a>
+                    </div>
+                </div>
+                <div class="card-body mx-3">
+                    <h6 class="card-title">Small BookSelf</h6>
+                    <div class="d-flex">
+                        <p class="text-danger fw-bold">$360</p>
+                    </div>
+                    <div class="stars mx-2 d-flex">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill start-fil"></i>
+                        <i class="bi bi-star-fill start-fil"></i>
+                        <p class="text-en-gras  fw-bold">(65)</p>
                     </div>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+  </div>
+
+  <!-- cart -->
+
+  <div class=" ">
+        <div class="  mx-5">
+            <div class="d-flex mx-3">
+                <div class="rectangle"></div>
+                <p class="our-products ">Our Products</p>
+            </div>
+            <p class="fs-1 fw-bold mx-4">Explore Our Products</p>
+        </div>
+        <div class="image-fill ">
+          <a href=""><i class="bi bi-arrow-left icon_arrow "></i></a>
+          <a href=""><i class="bi bi-arrow-right icon_arrow"></i></a>
+        </div>
+    </div>
+  <div class="container py-0 content">
+      <div class="row">
+          <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+              <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                  <img src="assets/rdoexxtrl-1-29x.png" alt="" class="card-img-top mx-5 mt-4 h-70 w-50 col-md-3 col-12 col-sm-6 col-lg-3">
+                  <div class="icon-heart-eye">
+                    <a href=""><i class="bi bi-suit-heart"></i> </a>
+                    <a href=""><i class="bi bi-eye"></i></a>
+                  </div>
+              </div>
+              <div class="card-body mx-3">
+                  <h6 class="card-title">Breed Dry Dog Food</h6>
+                  <div class="d-flex">
+                      <p class="text-danger py-4">$100</p>
+                      <div class="stars mx-2 py-4 d-flex justify-content-end">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill start-fil"></i>
+                        <i class="bi bi-star-fill start-fil"></i>
+                        <p class="text-en-gras py-0 mx-1 fw-bold">(35)</p>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+            <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                <img src="assets/eos-250d-03-500x500-1-5ar.png" alt="" class="card-img-top mx-5 h-70 w-50 mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
+                <button class="bg-dark text-white btn-cart py-2">Add To Cart</button>
+                <div class="icon-heart-eye">
+                  <a href=""><i class="bi bi-suit-heart"></i> </a>
+                  <a href=""><i class="bi bi-eye"></i></a>
+                </div>
+            </div>
+            <div class="card-body mx-2">
+                <h6 class="card-title">CANON EOS DSLR Camera</h6>
+                <div class="d-flex">
+                    <p class="text-danger py-4 mt-1">$360</p>
+                    <div class="stars mx-2 py-4 d-flex">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <p class="text-en-gras py-0 mx-1 fw-bold">(95)</p>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+          <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+            <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                <img src="assets/ideapad-gaming-3i-01-500x500-1-QA6.png" alt="" class="card-img-top h-80 w-80  mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="icon-heart-eye mt-5">
+                  <a href=""><i class="bi bi-suit-heart"></i> </a>
+                  <a href=""><i class="bi bi-eye"></i></a>
+                </div>
+            </div>
+            <div class="card-body mx-2">
+                <h6 class="card-title">ASUS FHD Gaming Laptop</h6>
+                <div class="d-flex">
+                <p class="text-danger py-4 mt-1">$360</p>
+                    <div class="stars mx-2 py-4 d-flex">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <p class="text-en-gras py-0 mx-1 fw-bold">(95)</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+            <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                <img src="assets/curology-j7pkvqrtusm-unsplash-1.png" alt="" class="card-img-top h-100 w-100 mb-5 col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="icon-heart-eye ">
+                  <a href=""><i class="bi bi-suit-heart"></i> </a>
+                  <a href=""><i class="bi bi-eye"></i></a>
+                </div>
+            </div>
+            <div class="card-body mx-2">
+                <h6 class="card-title">Curology Product Set</h6>
+                <div class="d-flex">
+                    <p class="text-danger py-4">$500</p>
+                    <div class="stars mx-2 py-4 d-flex justify-content-end">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <p class="text-en-gras py-0 mx-1 fw-bold">(145)</p>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+            <div class="card border-0 " style=" background-color: #f2f2f2;height: 250px;">
+                <img src="assets/new-mercedes-benz-gtr-licensed-ride-on-car-kids-electric-toy-car-1-7NJ.png" alt="" class="card-img-top h-80 w-80 mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="icon-heart-eye mt-5">
+                  <a href=""><i class="bi bi-suit-heart"></i> </a>
+                  <a href=""><i class="bi bi-eye"></i></a>
+                </div>
+            </div>
+            <div class="card-body mx-2">
+                <h6 class="card-title">Kids Electric Car</h6>
+                <div class="d-flex">
+                    <p class="text-danger py-4">$960</p>
+                    <div class="stars mx-2 py-4 d-flex ">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <p class="text-en-gras py-0 mx-1 fw-bold">(65)</p>
+                    </div>
+                </div>
+                <div class="image-color-change py-1">
+                  <img src="assets/colour-chnage-GAE.png" alt="">
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+            <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                <img src="assets/copasense-1-2ki.png" alt="" class="card-img-top h-80 w-80  mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="icon-heart-eye mt-5">
+                  <a href=""><i class="bi bi-suit-heart"></i> </a>
+                  <a href=""><i class="bi bi-eye"></i></a>
+                </div>
+            </div>
+            <div class="card-body mx-2">
+                <h6 class="card-title">Jr. Zoom Soccer Cleats</h6>
+                <div class="d-flex">
+                    <p class="text-danger py-4">$1160</p>
+                    <div class="stars mx-2 py-4 d-flex justify-content-end">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <p class="text-en-gras py-1 mx-1 fw-bold">(35)</p>
+                    </div>
+
+                </div>
+                <div class="image-color-change py-1">
+                  <img src="assets/colour-chnage-GAE.png" alt="">
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+            <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                <img src="assets/gp11prd3-1-f2i.png" alt="" class="card-img-top h-80 w-80 mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="icon-heart-eye mt-5">
+                  <a href=""><i class="bi bi-suit-heart"></i> </a>
+                  <a href=""><i class="bi bi-eye"></i></a>
+                </div>
+            </div>
+            <div class="card-body mx-2">
+                <h6 class="card-title">GP11 Shooter USB Gamepad</h6>
+                <div class="d-flex">
+                    <p class="text-danger py-4">$660</p>
+                    <div class="stars mx-2 py-4 d-flex justify-content-end">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <p class="text-en-gras py-0 mx-1 fw-bold">(55)</p>
+                    </div>
+
+                </div>
+                <div class="image-color-change py-1">
+                  <img src="assets/colour-chnage-GAE.png" alt="">
+                </div>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-12 col-sm-6 col-lg-3 ">
+            <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
+                <img src="assets/z8a1x34750011000000light-reversible-quilted-satin-jacket-1-3AA.png" alt="" class="card-img-top h-80 w-80  mt-4 col-md-3 col-12 col-sm-6 col-lg-3">
+                <div class="icon-heart-eye mt-5">
+                  <a href=""><i class="bi bi-suit-heart"></i> </a>
+                  <a href=""><i class="bi bi-eye"></i></a>
+                </div>
+            </div>
+            <div class="card-body mx-2">
+                <h6 class="card-title">Quilted Satin Jacket</h6>
+                <div class="d-flex">
+                    <p class="text-danger py-4">$660</p>
+                    <div class="stars mx-2 py-4 d-flex justify-content-end">
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <i class="bi bi-star-fill start-fil"></i>
+                      <p class="text-en-gras py-0 mx-1 fw-bold">(55)</p>
+                    </div>
+                </div>
+                <div class="image-color-change ">
+                  <img src="assets/colour-chnage-GAE.png" alt="">
+                </div>
+            </div>
+          </div>
+          <div class="  mx-auto col-md-6 col-12">
+           <a href="{{route('register')}}" class="text-decoration-none"><button class="btn btn-lg btn-danger btn-button btn-block mx-5" type="button">View All Products</button></a>
+          </div>
+
+      </div>
+  </div>
+
+  <!-- feature -->
+  <div class="container-fluid p-5">
+    <p class="para1"><span>&nbsp;&nbsp;&nbsp;</span> Featured</p>
+    <h1 class="title1 my-5">NEW ARRIVAL</h1>
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12">
+        <img src="assets/fotter-img1.png" alt="">
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <div class="row">
+          <div class="col-12">
+            <img src="./assets/fotter-img2.png" alt="">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 py-4">
+            <img src="./assets/fotter-img3.png" alt="">
+          </div>
+          <div class="col-6 py-4">
+            <img src="./assets/fotter-img4.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row text-center pt-5">
+      <div class="col-lg-4 col-md-12">
+        <img src="./assets/icon-car.png" alt="" width="35%">
+        <h4 class="pt-3">FREE AND FAST DELIVERY</h4>
+        <p>Free delivery for all orders over $140</p>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <img src="./assets/icon-kit.png" alt="" width="35%">
+        <h4 class="pt-3">24/7 CUSTOMER SERVICE</h4>
+        <p>Friendly 24/7 customer support</p>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <img src="./assets/icon-validate.png" alt="" width="35%">
+        <h4 class="pt-3">MONEY BACK GUARANTEE</h4>
+        <p>We reurn money within 30 days</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="container-fluid text-light pt-5 mt-5 footer1">
+    <div class="row footer">
+      <div class="col-lg-3 col-md-6">
+        <h4>Exclusive</h4>
+        <ul class="list-group">
+          <li>Subscrire</li>
+          <li>Get 10% off your first order</li>
+          <div class="d-flex div1">
+            <input type="text" placeholder="Enter votre adress email" class="outline-0 bg-none">
+            <a href="#"><img src="./assets/icon-send-SNe.png" alt="" width="20px" class="ms-4"></a>
+          </div>
+          <div class="pt-5 rso">
+            <a href="#"><img src="./assets/icon-facebook-4W6.png" alt="" width="40%"></a>
+            <a href="#"><img src="./assets/icon-instagram-sqk.png" alt="" width="40%"></a>
+            <a href="#"><img src="./assets/icon-twitter-G5x.png" alt="" width="40%"></a>
+            <a href="#"><img src="./assets/icon-linkedin-Dge.png" alt="" width="40%"></a>
+          </div>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h4>Support</h4>
+        <ul class="list-group">
+          <li>111 Bijoy sarani, Dhaka,  DH 1515, Bangladesh.</li>
+          <li><a href="#" style="color: aliceblue; text-decoration: none;">exclusive@gmail.com</a></li>
+          <li>+88015-88888-9999</li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h4>Account</h4>
+        <ul class="list-group">
+          <li>My Account</li>
+          <li><a href=".#" style="color:aliceblue; text-decoration-line: none;">Login </a>/ <a href="#" style="color:aliceblue; text-decoration-line: none;">Register</a></li>
+          <li><a href="#" style="color:aliceblue; text-decoration-line: none;">Cart</a></li>
+          <li><a href="#" style="color:aliceblue; text-decoration-line: none;">Wishlist</a></li>
+          <li><a href="#" style="color:aliceblue; text-decoration-line: none;">Shop</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h4>Quick Link</h4>
+        <ul class="list-group">
+          <li>Privacy Policy</li>
+          <li>Terms Of Use</li>
+          <li><a href="#" style="color:aliceblue; text-decoration-line: none;">FAQ</a></li>
+          <li><a href="#" style="color:aliceblue; text-decoration-line: none;">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <h4>Download App</h4>
+        <p>Save $3 with App New User Only</p>
+        <div class="QR m-5">
+            <p><a href="#"><img src="./assets/qrcode-1.png" width="50%"></a></p>
+            <p class="para2">
+                <a href="#"><img class="image1" src="./assets/png-transparent-google-play-store-logo-google-play-app-store-android-wallets-text-label-logo-eU2.png" width="90px"></a>
+                <a href="#"><img class="image1" src="./assets/download-appstore-Yae.png" width="70px"></a>
+            </p>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex cop">
+      <img src="./assets/icon-copyright-qo8.png" alt="" class="cop1">
+      <p>Copyright Rimel 2022. All right reserved</p>
+    </div>
+   </div>
+
+
+    <script>
+            const initSlider =() => {
+        const flech1 = document.querySelectorAll(".flech1");
+        const cartCategorie = document.querySelector(".cartCategorie");
+        flech1.forEach(flech1 => {
+            flech1.addEventListener("click",() => {
+            const direction = flech1.id === "prev" ? -1 : 1;
+            const scrollAmount = cartCategorie.clientWidth * direction;
+            cartCategorie.scrollBy({left: scrollAmount, behavior: "smooth"});
+            });
+        });
+        }
+        window.addEventListener("load", initSlider);
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
+
+</body>
 </html>

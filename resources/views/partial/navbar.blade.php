@@ -149,10 +149,10 @@ visibility: hidden;
     height: 400px;
 }
 .form-control{
+    width: 50vh;
     margin-bottom: 2vh;
 }
 input{
-    width: 200vh;
     background-color: #f2f2f2;
 }
 .bi-search{
@@ -191,11 +191,11 @@ input{
                     <li class="nav-item">
                         <a class="nav-link text-black" href="{{route('contact')}}">Contact</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item  ">
                         <a class="nav-link text-black" href="{{route('register')}}">Sign Up</a>
                     </li>
                 </ul>
-                    <form class="d-flex">
+                    <form class="d-flex mx-5">
                         <input class="form-control border-0" type="search" placeholder="what are you looking for?" aria-label="Search" style="  background-color: #f2f2f2;">
                         <i class="bi bi-search"></i>
                     </form>
@@ -217,7 +217,7 @@ input{
         <div class="col-lg-12 col-sm-12 col-12">
             <div class="dropdown">
 
-                <button id="dLabel" type="button" class="btn btn-primary me-0" data-bs-toggle="dropdown">
+                <button id="dLabel" type="button" class="btn btn-danger" data-bs-toggle="dropdown">
                 <span class="badge bg-danger">{{ count((array) session('cart')) }}</span> <i class="bi bi-cart3" aria-hidden="true"></i>
                 </button>
 

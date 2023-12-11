@@ -135,34 +135,7 @@
     </div>
   </div>
 
-   <!-- <div class="container py-5">
-    <div class="row">
-        <div class="col-md-6 mx-auto">
-            <div class="custom-section">
-                <div class="d-flex mx-5">
-                        <div>
-                            <p>Categories</p>
-                            <h1 class="">Title</h1>
-                            <div class="rounded-border">
-                                <div>
-                                    <p><span id="hours">23</span></p>
-                                    <p>Hours</p>
-                                </div>
-
-                                <p>Minutes: <span id="minutes">00</span></p>
-                                <p>Secondes: <span id="seconds">00</span></p>
-                                <button class="btn btn-primary">Button</button>
-                            </div>
-                            <div>
-                                <img src="assets/jblboombox2hero020x1-1-1.png" alt="Image" class="img-fluid rounded-border">
-                            </div>
-                        </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div> -->
+  
 
 
 
