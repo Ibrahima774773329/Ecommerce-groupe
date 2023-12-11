@@ -176,7 +176,7 @@ color: #fff;
     background-color: red;
     color: #fff;
     border-radius: 5px;
-    left: -190px;
+    left: -220px;
     bottom: 150px;
 }
 .promo2{
