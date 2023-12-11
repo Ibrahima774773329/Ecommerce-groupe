@@ -17,7 +17,7 @@
                     Cancel
                     </div>
                     <div class="card-body">
-                        <a href="{{ url('/') }}" class="btn btn-info"> <i class="fa fa-arrow-left"></i> Continue Shopping</a>
+                        <a href="{{route('whislist')}}" class="btn btn-info"> <i class="fa fa-arrow-left"></i> Continue Shopping</a>
                     </div>
                 </div>
             </div>
