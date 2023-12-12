@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -145,7 +146,11 @@ font-size: 16px;
 
 .add1{
     position: relative !important;
-    bottom: 80px !important;
+    bottom: 60px !important;
+}
+.add1 a{
+text-decoration: none;
+color: #fff;
 }
 
 .add2{
@@ -171,8 +176,8 @@ font-size: 16px;
     background-color: red;
     color: #fff;
     border-radius: 5px;
-    left: -218px;
-    bottom: 40px;
+    left: -190px;
+    bottom: 150px;
 }
 .promo2{
     position: relative;
@@ -196,6 +201,7 @@ font-size: 16px;
 </style>
 <body>
     @include('partial.navbar')
+    
 
   <div class=" mx-5">
     <div class=" d-flex mx-4">
@@ -207,10 +213,11 @@ font-size: 16px;
   </div>
   <div class="container mt-4">
     <div class="row">
+    @foreach($products as $product)
       <div class="col-md-3 col-12 col-sm-6 col-lg-3">
         <div class="card w-100 border-0 " style=" background-color: #f2f2f2;height: 250px;">
-          <img src="assets/c2st87460010820000light-gucci-savoy-medium-duffle-bag-1.png" class="card-img-top w-50 mx-5 py-2 m-4 col-md-3 col-12 col-sm-6 col-lg-3" alt="Image 1">
-             <button class="bg-dark text-white mt-5 py-1 add1 ">Add To Cart</button>
+          <img src="{{ asset('img') }}/{{ $product->photo }}" class="card-img-top w-50 mx-5 py-2 m-4 col-md-3 col-12 col-sm-6 col-lg-3" alt="Image 1">
+             <button class="bg-dark text-white mt-5 py-1 add1  "> <a href="{{ route('add_to_cart', $product->id) }}">Add To Cart</button>
           <div class="icon-heart-eye ">
           <a href=""><i class="bi bi-archive"></i> </a>
             <h6 class="promo">-35%</h6>
@@ -219,17 +226,19 @@ font-size: 16px;
           </div>
         </div>
         <div class="card-body">
-          <h6 class="card-title">Breed Dry Dog Food</h6>
-          <div class="d-flex">
-              <p class="text-danger py-2">$100 <span class="text-decoration-line-through">$1160</span> </p>
-
+          <h6 class="card-title">{{ $product->product_name }}</h6>
+          <div class="">
+              <p class="text-danger fw-bold py-2">${{ $product->price }}</p><br>
+              <!-- <p class="text-danger py-2">{{ $product->product_description }} </p> -->
+      
            </div>
         </div>
       </div>
-      <div class="col-md-3 col-12 col-sm-6 col-lg-3">
+      @endforeach
+      <!-- <div class="col-md-3 col-12 col-sm-6 col-lg-3">
         <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
           <img src="assets/gammaxx-l240-argb-1-500x500-1.png" class="card-img-top w-50 mx-5 py-4 col-md-3 col-12 col-sm-6 col-lg-3" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1 add2 ">Add To Cart</button>
+          <button class="bg-dark text-white mt-5 py-1 add2 "> <a href="{{route('cart')}}">Add To Cart</button>
           <div class="icon-heart-eye2 ">
             <a href=""><i class="bi bi-archive"></i> </a>
             </div>
@@ -244,7 +253,7 @@ font-size: 16px;
       <div class="col-md-3 col-12 col-sm-6 col-lg-3">
         <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
           <img src="assets/gp11prd3-1-UiN.png" class="card-img-top w-60 mx-5 py-5" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1 add2 ">Add To Cart</button>
+          <button class="bg-dark text-white mt-5 py-1 add2 "> <a href="{{route('cart')}}">Add To Cart</button>
           <div class="icon-heart-eye py-5">
             <a href=""><i class="bi bi-archive"></i> </a>
             </div>
@@ -260,7 +269,7 @@ font-size: 16px;
       <div class="col-md-3 col-12 col-sm-6 col-lg-3">
         <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
           <img src="assets/z8a1x34750011000000light-reversible-quilted-satin-jacket-1.png" class="card-img-top w-50 mx-5 py-3 " alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1 add3 ">Add To Cart</button>
+          <button class="bg-dark text-white mt-5 py-1 add3 "> <a href="{{route('cart')}}">Add To Cart</a></button>
         <div class="icon-heart-eye2 py-5 ">
             <a href=""><i class="bi bi-archive"></i> </a>
         </div>
@@ -275,7 +284,7 @@ font-size: 16px;
       <div class="col-md-3 col-12 col-sm-6 col-lg-3">
         <div class="card border-b" style=" background-color: #f2f2f2;height: 250px;">
           <img src="assets/ideapad-gaming-3i-01-500x500-1.png" class="card-img-top py-3" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1 add2">Add To Cart</button>
+          <button class="bg-dark text-white mt-5 py-1 add2"> <a href="{{route('cart')}}">Add To Cart</button>
           <div class="icon-heart-eye py-5">
              <a href=""><i class="bi bi-eye"></i></a>
              <h6 class="promo2">-35%</h6>
@@ -302,7 +311,7 @@ font-size: 16px;
       <div class="col-md-3 col-12 col-sm-6 col-lg-3">
         <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
           <img src="assets/g27cq4-500x500-1-3qt.png" class="card-img-top w-55" alt="Image 1">
-          <button class="bg-dark text-white mt-3 py-1 ">Add To Cart</button>
+          <button class="bg-dark text-white mt-3 py-1 "> <a href="{{route('cart')}}">Add To Cart</button>
           <div class="icon-heart-eye4 py-2 ">
              <a href=""><i class="bi bi-eye"></i></a>
           </div>
@@ -328,7 +337,7 @@ font-size: 16px;
       <div class="col-md-3 col-12 col-sm-6 col-lg-3">
         <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
           <img src="assets/g92-2-500x500-1.png" class="card-img-top  py-5" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1  add2">Add To Cart</button>
+          <button class="bg-dark text-white mt-5 py-1  add2"> <a href="{{route('cart')}}">Add To Cart</button>
           <div class="icon-heart-eye py-5 ">
              <a href=""><i class="bi bi-eye"></i></a>
              <h5 class="promo3">New</h5>
@@ -353,7 +362,7 @@ font-size: 16px;
       <div class="col-md-3 col-12 col-sm-6 col-lg-3">
         <div class="card border-0" style=" background-color: #f2f2f2;height: 250px;">
           <img src="assets/ak-900-01-500x500-1.png" class="card-img-top py-3" alt="Image 1">
-          <button class="bg-dark text-white mt-5 py-1  add2">Add To Cart</button>
+          <button class="bg-dark text-white mt-5 py-1  add2"> <a href="{{route('cart')}}">Add To Cart</button>
           <div class="icon-heart-eye py-5 ">
              <a href=""><i class="bi bi-eye"></i></a>
 
@@ -377,9 +386,12 @@ font-size: 16px;
       </div>
       <div class=" col-6 mx-auto ">
         <button class="btn btn-lg btn-danger btn-button btnview" type="button">View All Products</button>
-      </div>
+      </div> -->
     </div>
   </div>
+ 
+  @include('partial.footer')
+
 
 
 
@@ -389,7 +401,7 @@ font-size: 16px;
    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
   crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  @include('partial.footer')
+
 </body>
 </body>
 </html>
